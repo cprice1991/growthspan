@@ -568,13 +568,6 @@ img {
   margin-bottom: 2.25rem;
 }
 
-.cta__sub {
-  font-size: 1.05rem;
-  color: var(--ink-soft);
-  margin: 0 auto 2.25rem;
-  max-width: 44ch;
-}
-
 .cta__back {
   margin-top: 2rem;
 }
