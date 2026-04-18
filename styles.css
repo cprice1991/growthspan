@@ -577,16 +577,34 @@ img {
 
 .cta__back {
   margin-top: 2rem;
-  font-size: 0.95rem;
 }
 
-.cta__back a {
-  color: var(--muted);
+.cta__home-logo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 0;
   text-decoration: none;
+  opacity: 0.9;
+  transition: opacity 0.15s ease, transform 0.15s ease;
+  border-radius: 8px;
 }
 
-.cta__back a:hover {
-  color: var(--accent);
+.cta__home-logo:hover {
+  opacity: 1;
+  transform: translateY(-1px);
+}
+
+.cta__home-logo:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 4px;
+  opacity: 1;
+}
+
+.cta__home-logo img {
+  display: block;
+  height: 2.75rem;
+  width: auto;
 }
 
 /* ——— Footer ——— */
