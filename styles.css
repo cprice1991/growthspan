@@ -307,7 +307,6 @@ img {
   padding: clamp(3.5rem, 8vw, 6rem) 0;
 }
 
-.intro__grid,
 .clients__grid,
 .pull__grid {
   display: grid;
@@ -316,7 +315,6 @@ img {
 }
 
 @media (min-width: 780px) {
-  .intro__grid,
   .clients__grid,
   .pull__grid {
     grid-template-columns: 180px 1fr;
@@ -328,18 +326,22 @@ img {
   display: grid;
   gap: 2rem;
   align-items: start;
+  justify-items: start;
 }
 @media (min-width: 640px) {
   .intro__main {
     grid-template-columns: minmax(200px, 280px) minmax(0, 1fr);
     gap: 2.5rem;
+    align-items: start;
   }
 }
 
 /* Circle mask; image is slightly zoomed for a tighter crop */
 .intro__photo {
-  margin: 0 auto;
+  margin: 0;
   width: min(280px, 100%);
+  max-width: 100%;
+  justify-self: start;
   aspect-ratio: 1;
   border-radius: 50%;
   overflow: hidden;
@@ -348,7 +350,6 @@ img {
 }
 @media (min-width: 640px) {
   .intro__photo {
-    margin-inline: 0;
     width: min(100%, 280px);
   }
 }
