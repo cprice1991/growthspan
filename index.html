@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Growthspan — strategy and execution for teams ready to grow with clarity."
+    />
+    <title>Growthspan — Consulting</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Source+Sans+3:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <div class="shell header__inner">
+        <a class="logo" href="#">Growthspan</a>
+        <nav class="nav" aria-label="Primary">
+          <a href="#services">Services</a>
+          <a href="#approach">Approach</a>
+          <a href="#contact" class="nav__cta">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero">
+        <div class="shell hero__grid">
+          <div class="hero__copy">
+            <p class="eyebrow">Independent consulting</p>
+            <h1>Grow with clarity—not chaos.</h1>
+            <p class="lede">
+              I help leaders untangle priorities, align stakeholders, and ship
+              outcomes that stick. Practical strategy, hands-on execution, zero
+              fluff.
+            </p>
+            <div class="hero__actions">
+              <a class="button button--primary" href="#contact">Start a conversation</a>
+              <a class="button button--ghost" href="#services">View services</a>
+            </div>
+          </div>
+          <div class="hero__panel" aria-hidden="true">
+            <div class="hero__card">
+              <p class="hero__stat-label">Focus</p>
+              <p class="hero__stat">Outcome-led</p>
+              <p class="hero__stat-note">Roadmaps you can actually run.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="services" class="section">
+        <div class="shell">
+          <h2 class="section__title">Services</h2>
+          <p class="section__intro">
+            Engagements are tailored—workshops, sprints, or ongoing advisory.
+          </p>
+          <ul class="cards">
+            <li class="card">
+              <h3>Strategy &amp; prioritization</h3>
+              <p>
+                Cut through noise, define the few bets that matter, and build a
+                plan your team believes in.
+              </p>
+            </li>
+            <li class="card">
+              <h3>Operating rhythm</h3>
+              <p>
+                Meetings, metrics, and accountability that support speed
+                without burning people out.
+              </p>
+            </li>
+            <li class="card">
+              <h3>Execution support</h3>
+              <p>
+                Partner with you through delivery—unblocking decisions,
+                aligning partners, tracking results.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="approach" class="section section--alt">
+        <div class="shell split">
+          <div>
+            <h2 class="section__title">How I work</h2>
+            <p class="section__intro">
+              Clear artifacts, candid feedback, and respect for your culture. I
+              integrate with your team—not hover above it.
+            </p>
+          </div>
+          <ol class="steps">
+            <li>
+              <span class="steps__num">01</span>
+              <div>
+                <strong>Listen &amp; frame</strong>
+                <p>Understand goals, constraints, and what “good” looks like.</p>
+              </div>
+            </li>
+            <li>
+              <span class="steps__num">02</span>
+              <div>
+                <strong>Design the path</strong>
+                <p>Options, tradeoffs, and a sequenced plan with owners.</p>
+              </div>
+            </li>
+            <li>
+              <span class="steps__num">03</span>
+              <div>
+                <strong>Run with you</strong>
+                <p>Stay through the messy middle until momentum holds.</p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section id="contact" class="section contact">
+        <div class="shell contact__inner">
+          <h2 class="section__title">Contact</h2>
+            <p class="contact__text">
+              Tell me what you’re building. I’ll reply within two business days.
+            </p>
+            <a class="button button--primary" href="mailto:hello@example.com"
+              >hello@example.com</a
+            >
+            <p class="contact__hint">
+              Replace this address with yours in <code>index.html</code> before
+              going live.
+            </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="shell footer__inner">
+        <p>&copy; <span id="year"></span> Growthspan. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
