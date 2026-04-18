@@ -225,7 +225,7 @@ img {
 }
 
 .hero .display {
-  max-width: 18ch;
+  max-width: min(100%, 36ch);
   margin-inline: auto;
 }
 
@@ -233,7 +233,7 @@ img {
   font-size: clamp(1.05rem, 1.5vw, 1.2rem);
   line-height: 1.55;
   color: var(--ink-soft);
-  max-width: 46ch;
+  max-width: min(100%, 62ch);
   margin: 1.75rem auto 2.25rem;
 }
 
