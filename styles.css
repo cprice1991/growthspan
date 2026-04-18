@@ -493,6 +493,25 @@ img {
   min-width: 0;
 }
 
+/* Fixed slot so every company name starts on the same vertical line */
+.clients__mark {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.clients__mark .clients__logo {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  object-position: left center;
+}
+
 .clients__logo {
   width: 22px;
   height: 22px;
@@ -501,15 +520,6 @@ img {
   /* No tile background — monochrome marks */
   filter: grayscale(1) contrast(1.12);
   opacity: 0.88;
-}
-
-/* Wide raster logos (e.g. wordmarks): keep aspect ratio, still B&W */
-.clients__logo--local {
-  width: auto;
-  max-width: 72px;
-  height: 22px;
-  object-fit: contain;
-  object-position: left center;
 }
 
 .clients__logo--dark {
