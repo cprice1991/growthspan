@@ -512,6 +512,12 @@ img {
   opacity: 0.96;
 }
 
+/* Favicon white box → blends into page (until a transparent PNG is used) */
+.clients__logo--earthmover {
+  mix-blend-mode: multiply;
+  opacity: 1;
+}
+
 .clients__name {
   font-weight: 500;
   color: var(--ink);
