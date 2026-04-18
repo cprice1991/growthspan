@@ -324,6 +324,39 @@ img {
   }
 }
 
+.intro__main {
+  display: grid;
+  gap: 2rem;
+  align-items: start;
+}
+@media (min-width: 640px) {
+  .intro__main {
+    grid-template-columns: minmax(200px, 280px) minmax(0, 1fr);
+    gap: 2.5rem;
+  }
+}
+
+.intro__photo {
+  margin: 0;
+  max-width: 280px;
+  margin-inline: auto;
+}
+@media (min-width: 640px) {
+  .intro__photo {
+    margin-inline: 0;
+    max-width: none;
+  }
+}
+
+.intro__photo img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: var(--radius);
+  border: 1px solid var(--line);
+  box-shadow: 0 2px 0 rgba(255, 255, 255, 0.5) inset;
+}
+
 .intro__body {
   max-width: 56ch;
 }
