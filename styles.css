@@ -498,6 +498,15 @@ img {
   opacity: 0.88;
 }
 
+/* Wide raster logos (e.g. wordmarks): keep aspect ratio, still B&W */
+.clients__logo--local {
+  width: auto;
+  max-width: 72px;
+  height: 22px;
+  object-fit: contain;
+  object-position: left center;
+}
+
 .clients__name {
   font-weight: 500;
   color: var(--ink);
