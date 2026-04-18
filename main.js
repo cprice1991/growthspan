@@ -53,7 +53,8 @@
   }
 
   document.querySelectorAll("[data-copy-email]").forEach(function (btn) {
-    btn.addEventListener("click", function () {
+    btn.addEventListener("click", function (e) {
+      e.preventDefault();
       copyEmail().then(function (ok) {
         if (ok) {
           showToast(EMAIL + " copied");
