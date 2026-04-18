@@ -507,6 +507,11 @@ img {
   object-position: left center;
 }
 
+.clients__logo--dark {
+  filter: grayscale(1) contrast(1.28) brightness(0.74);
+  opacity: 0.96;
+}
+
 .clients__name {
   font-weight: 500;
   color: var(--ink);
