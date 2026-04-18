@@ -377,7 +377,7 @@ img {
 }
 
 .intro__body {
-  max-width: 56ch;
+  max-width: min(100%, 72ch);
 }
 
 /* ——— Work ——— */
