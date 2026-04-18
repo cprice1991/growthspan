@@ -12,8 +12,8 @@
   --accent-ink: #7a2a12;
   --accent-soft: rgba(161, 59, 31, 0.08);
   --ring: rgba(161, 59, 31, 0.45);
-  --serif: "Instrument Serif", "Iowan Old Style", Georgia, serif;
   --sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --display: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   --max: 1120px;
   --gutter: clamp(1.25rem, 4vw, 2.5rem);
 }
@@ -74,11 +74,11 @@ img {
 /* ——— Type system ——— */
 
 .display {
-  font-family: var(--serif);
-  font-weight: 400;
-  font-size: clamp(2.6rem, 7vw, 5.5rem);
-  line-height: 1;
-  letter-spacing: -0.02em;
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: clamp(2.4rem, 6.4vw, 5rem);
+  line-height: 1.02;
+  letter-spacing: -0.035em;
   margin: 0;
   color: var(--ink);
 }
@@ -86,7 +86,8 @@ img {
 .display em {
   font-style: italic;
   color: var(--accent);
-  font-weight: 400;
+  font-weight: 500;
+  letter-spacing: -0.03em;
 }
 
 .kicker {
@@ -110,22 +111,23 @@ img {
 }
 
 .lede {
-  font-family: var(--serif);
-  font-weight: 400;
-  font-size: clamp(1.35rem, 2.4vw, 1.7rem);
+  font-family: var(--display);
+  font-weight: 500;
+  font-size: clamp(1.25rem, 2.2vw, 1.55rem);
   line-height: 1.4;
   color: var(--ink);
-  letter-spacing: -0.005em;
+  letter-spacing: -0.018em;
   margin: 0 0 1.25rem;
 }
 
 .lede em {
   font-style: italic;
   color: var(--accent-ink);
+  font-weight: 500;
 }
 
 .lede strong {
-  font-weight: 500;
+  font-weight: 600;
   color: var(--ink);
 }
 
@@ -161,10 +163,11 @@ img {
   gap: 0.55rem;
   text-decoration: none;
   color: var(--ink);
-  font-family: var(--serif);
-  font-size: 1.4rem;
+  font-family: var(--display);
+  font-size: 1.15rem;
+  font-weight: 600;
   line-height: 1;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.02em;
 }
 
 .wordmark__mark {
@@ -356,11 +359,11 @@ img {
 }
 
 .work__title {
-  font-family: var(--serif);
-  font-weight: 400;
-  font-size: clamp(1.5rem, 2.5vw, 1.9rem);
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: clamp(1.35rem, 2.3vw, 1.7rem);
   line-height: 1.15;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.025em;
   margin: 0;
   color: var(--ink);
 }
@@ -375,12 +378,14 @@ img {
 
 .work__fit {
   margin: 0;
-  font-family: var(--serif);
+  font-family: var(--display);
   font-style: italic;
-  font-size: 1.05rem;
+  font-weight: 500;
+  font-size: 0.98rem;
   color: var(--accent-ink);
-  line-height: 1.45;
+  line-height: 1.5;
   max-width: 30ch;
+  letter-spacing: -0.005em;
 }
 
 /* ——— Clients ——— */
@@ -420,9 +425,10 @@ img {
 }
 
 .clients__list em {
-  font-family: var(--serif);
+  font-family: var(--display);
   font-style: italic;
-  font-size: 1.05rem;
+  font-weight: 400;
+  font-size: 0.98rem;
   color: var(--muted);
 }
 
@@ -444,11 +450,11 @@ img {
 }
 
 .pull__quote p {
-  font-family: var(--serif);
-  font-weight: 400;
-  font-size: clamp(1.6rem, 3.2vw, 2.3rem);
-  line-height: 1.3;
-  letter-spacing: -0.01em;
+  font-family: var(--display);
+  font-weight: 500;
+  font-size: clamp(1.35rem, 2.6vw, 1.95rem);
+  line-height: 1.35;
+  letter-spacing: -0.022em;
   color: var(--ink);
   margin: 0;
 }
@@ -456,7 +462,7 @@ img {
 .pull__quote p em {
   font-style: normal;
   color: var(--accent);
-  font-family: var(--serif);
+  font-family: var(--display);
 }
 
 .pull__quote figcaption {
@@ -610,10 +616,11 @@ img {
 
 .t-card__quote p {
   margin: 0 0 1rem;
-  font-family: var(--serif);
-  font-size: clamp(1.15rem, 1.8vw, 1.32rem);
-  line-height: 1.55;
-  color: var(--ink);
+  font-family: var(--display);
+  font-weight: 400;
+  font-size: clamp(1.02rem, 1.4vw, 1.12rem);
+  line-height: 1.65;
+  color: var(--ink-soft);
   letter-spacing: -0.005em;
 }
 
@@ -622,7 +629,7 @@ img {
 }
 
 .t-card__quote strong {
-  font-weight: 500;
+  font-weight: 600;
   color: var(--ink);
   background: linear-gradient(
     180deg,
