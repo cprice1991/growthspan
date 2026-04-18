@@ -357,8 +357,10 @@ img {
   height: 100%;
   display: block;
   object-fit: cover;
-  /* Bias toward upper frame so a portrait reads as a headshot */
-  object-position: center 18%;
+  /* Left of center in the source frame + higher for headshot; zoom for tighter crop */
+  object-position: 38% 12%;
+  transform: scale(1.28);
+  transform-origin: 38% 12%;
 }
 
 .intro__body {
