@@ -336,7 +336,7 @@ img {
   }
 }
 
-/* Square image at intrinsic framing; circle is only a mask — no extra crop */
+/* Circle mask; image is slightly zoomed for a tighter crop */
 .intro__photo {
   margin: 0 auto;
   width: min(280px, 100%);
@@ -357,8 +357,11 @@ img {
   width: 100%;
   height: 100%;
   display: block;
-  object-fit: contain;
+  object-fit: cover;
   object-position: center;
+  /* Slight zoom — tighter headshot without heavy repositioning */
+  transform: scale(1.1);
+  transform-origin: center center;
 }
 
 .intro__body {
