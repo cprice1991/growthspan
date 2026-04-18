@@ -380,6 +380,35 @@ img {
   max-width: min(100%, 72ch);
 }
 
+.intro__social {
+  margin: 1.35rem 0 0;
+}
+
+.intro__linkedin {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ink-soft);
+  line-height: 0;
+  border-radius: 6px;
+  transition: color 0.15s ease, opacity 0.15s ease;
+}
+
+.intro__linkedin:hover {
+  color: var(--accent);
+}
+
+.intro__linkedin:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 4px;
+}
+
+.intro__linkedin svg {
+  display: block;
+  width: 1.4rem;
+  height: 1.4rem;
+}
+
 /* ——— Work ——— */
 
 .work {
