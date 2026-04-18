@@ -215,10 +215,18 @@ img {
 
 .hero {
   padding: clamp(4.5rem, 12vw, 9rem) 0 clamp(3.5rem, 9vw, 6rem);
+  text-align: center;
+}
+
+.hero .wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .hero .display {
-  max-width: 16ch;
+  max-width: 18ch;
+  margin-inline: auto;
 }
 
 .hero__sub {
@@ -226,12 +234,13 @@ img {
   line-height: 1.55;
   color: var(--ink-soft);
   max-width: 46ch;
-  margin: 1.75rem 0 2.25rem;
+  margin: 1.75rem auto 2.25rem;
 }
 
 .hero__meta {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 1rem;
   flex-wrap: wrap;
 }
