@@ -336,9 +336,10 @@ img {
   }
 }
 
+/* Square image at intrinsic framing; circle is only a mask — no extra crop */
 .intro__photo {
   margin: 0 auto;
-  width: min(260px, 100%);
+  width: min(280px, 100%);
   aspect-ratio: 1;
   border-radius: 50%;
   overflow: hidden;
@@ -348,7 +349,7 @@ img {
 @media (min-width: 640px) {
   .intro__photo {
     margin-inline: 0;
-    width: min(100%, 240px);
+    width: min(100%, 280px);
   }
 }
 
@@ -356,11 +357,8 @@ img {
   width: 100%;
   height: 100%;
   display: block;
-  object-fit: cover;
-  /* Pan down so shoulders / upper chest show, not chin-cutoff */
-  object-position: 38% 42%;
-  transform: scale(1.28);
-  transform-origin: 38% 42%;
+  object-fit: contain;
+  object-position: center;
 }
 
 .intro__body {
