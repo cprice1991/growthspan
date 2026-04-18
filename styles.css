@@ -468,7 +468,7 @@ img {
 .clients__list li {
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
+  align-items: center;
   gap: 1.5rem;
   padding: 1rem 0;
   border-top: 1px solid var(--line-soft);
@@ -481,7 +481,24 @@ img {
   padding-top: 0;
 }
 
-.clients__list span {
+.clients__primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  min-width: 0;
+}
+
+.clients__logo {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+  object-fit: contain;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.65);
+  box-shadow: 0 0 0 1px var(--line-soft);
+}
+
+.clients__name {
   font-weight: 500;
   color: var(--ink);
 }
