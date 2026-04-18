@@ -27,7 +27,14 @@
         <nav aria-label="Primary" class="nav__links">
           <a href="index.html#services">Services</a>
           <a href="testimonials.html" aria-current="page">Testimonials</a>
-          <a href="mailto:christin@growthspan.io" class="nav__cta">Get in touch</a>
+          <button
+            type="button"
+            class="nav__cta"
+            data-copy-email
+            aria-label="Copy email address to clipboard"
+          >
+            Get in touch
+          </button>
         </nav>
       </div>
     </header>
@@ -81,7 +88,7 @@
           </article>
 
           <article class="t-card">
-            <p class="t-card__tag">Chief of Staff Recruiting + Mentorship</p>
+            <p class="t-card__tag">Chief of Staff Recruiter + Mentorship</p>
             <blockquote class="t-card__quote">
               <p>
                 Shortly before I was hired, our founders, who both have
@@ -256,8 +263,13 @@
       </div>
     </footer>
 
-    <script>
-      document.getElementById("year").textContent = new Date().getFullYear();
-    </script>
+    <div
+      id="email-toast"
+      class="toast"
+      role="status"
+      aria-live="polite"
+      aria-hidden="true"
+    ></div>
+    <script src="main.js" defer></script>
   </body>
 </html>
