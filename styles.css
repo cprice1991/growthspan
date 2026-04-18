@@ -160,18 +160,19 @@ img {
 .wordmark {
   display: inline-flex;
   align-items: center;
-  gap: 0.55rem;
   text-decoration: none;
   color: var(--ink);
-  font-family: var(--display);
-  font-size: 1.15rem;
-  font-weight: 600;
-  line-height: 1;
-  letter-spacing: -0.02em;
+  line-height: 0;
+}
+
+.wordmark:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 4px;
+  border-radius: 6px;
 }
 
 .wordmark__mark {
-  height: 1.65rem;
+  height: clamp(2.15rem, 4.2vw, 2.85rem);
   width: auto;
   display: block;
 }
