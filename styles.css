@@ -77,17 +77,23 @@ body {
 }
 
 .logo {
-  font-family: var(--font-display);
-  font-weight: 600;
-  font-size: 1.25rem;
-  color: var(--ink);
+  display: inline-flex;
+  align-items: center;
   text-decoration: none;
-  letter-spacing: -0.02em;
+  line-height: 0;
 }
 
-.logo:hover,
-.logo:focus-visible {
-  color: var(--accent);
+.logo__img {
+  height: 2.5rem;
+  width: auto;
+  max-width: min(200px, 50vw);
+  object-fit: contain;
+  display: block;
+}
+
+.logo:hover .logo__img,
+.logo:focus-visible .logo__img {
+  opacity: 0.9;
 }
 
 .nav {
