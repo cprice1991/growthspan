@@ -355,12 +355,13 @@ button.nav__cta:focus-visible {
     margin-bottom: 0.85rem;
   }
 
-  .landing .intro__body .lede {
+  /* Exclude greeting — it uses .intro__lede-greeting (larger type) */
+  .landing .intro__body .lede:not(.intro__lede-greeting) {
     font-size: clamp(0.81rem, 0.92vw, 0.96rem);
   }
 
   .landing .intro__body .intro__lede-greeting {
-    font-size: clamp(1.06rem, 1.28vw, 1.26rem);
+    font-size: clamp(1.42rem, 1.85vw, 1.72rem);
   }
 
   .landing .intro__body .intro__lede-lead,
@@ -548,12 +549,39 @@ button.nav__cta:focus-visible {
   gap: 1.25rem;
 }
 
+/* Portrait + name/role: centered in the aside column; label stays left via .pull__aside */
+.pull__credit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 1.25rem;
+}
+
 .pull__byline {
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.2rem;
+}
+
+.pull__name {
+  margin: 0;
   font-size: 0.92rem;
-  color: var(--muted);
-  font-weight: 500;
+  font-weight: 600;
+  color: var(--ink);
   letter-spacing: 0.01em;
+}
+
+.pull__meta {
+  margin: 0;
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: var(--muted);
+  letter-spacing: 0.01em;
+  line-height: 1.35;
 }
 
 @media (min-width: 780px) {
@@ -667,13 +695,13 @@ button.nav__cta:focus-visible {
   min-width: 0;
 }
 
-/* Entire bio block: one step smaller than default .lede */
-.intro__body .lede {
+/* Bio body copy; greeting uses .intro__lede-greeting instead */
+.intro__body .lede:not(.intro__lede-greeting) {
   font-size: clamp(0.93rem, 1.62vw, 1.12rem);
 }
 
 .intro__body .intro__lede-greeting {
-  font-size: clamp(1.18rem, 2.15vw, 1.42rem);
+  font-size: clamp(1.52rem, 2.85vw, 1.95rem);
 }
 
 .intro__body .intro__lede-greeting,
@@ -768,10 +796,29 @@ button.nav__cta:focus-visible {
 }
 
 @media (min-width: 780px) {
+  /* Center the three-column service rows as a block within the page */
+  .work__list {
+    width: 100%;
+    max-width: min(100%, 56rem);
+    margin-inline: auto;
+  }
+
   .work__item {
-    grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.5fr) minmax(0, 1fr);
-    gap: 2.5rem;
+    /* Title | fit line | body copy — min width on col1 so “Strategic Advisor” stays one line */
+    grid-template-columns: minmax(12.75rem, 1.12fr) minmax(0, 0.95fr) minmax(0, 1.52fr);
+    gap: 0.5rem 2.25rem;
     align-items: baseline;
+  }
+
+  .work__item .work__fit {
+    order: 1;
+  }
+
+  .work__item .work__desc {
+    order: 2;
+    font-size: 0.88rem; /* column 3 — slightly under base 0.92rem */
+    /* Extra air between fit line (col2) and body copy (col3) */
+    padding-inline-start: 3rem;
   }
 
   .work__item > * {
@@ -829,14 +876,15 @@ button.nav__cta:focus-visible {
 }
 
 .clients__list li {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
   align-items: center;
-  gap: 1.5rem;
+  /* ~2in visual break between company block and description (scales down on narrow widths) */
+  column-gap: clamp(2.5rem, 10vw, 2.25in);
+  row-gap: 0.5rem;
   padding: 1rem 0;
   border-top: 1px solid var(--line-soft);
   font-size: 1.02rem;
-  flex-wrap: wrap;
   min-width: 0;
 }
 
@@ -850,6 +898,18 @@ button.nav__cta:focus-visible {
   align-items: center;
   gap: 0.65rem;
   min-width: 0;
+  text-decoration: none;
+  color: inherit;
+  border-radius: 4px;
+  outline-offset: 3px;
+}
+
+a.clients__primary:hover .clients__name {
+  color: var(--accent);
+}
+
+a.clients__primary:focus-visible {
+  outline: 2px solid var(--ring);
 }
 
 /* Fixed slot so every company name starts on the same vertical line */
@@ -898,7 +958,7 @@ button.nav__cta:focus-visible {
 }
 
 .clients__list em {
-  flex: 1 1 12rem;
+  justify-self: end;
   min-width: 0;
   text-align: right;
   font-family: var(--display);
@@ -910,14 +970,14 @@ button.nav__cta:focus-visible {
 
 @media (max-width: 520px) {
   .clients__list li {
-    flex-direction: column;
+    grid-template-columns: 1fr;
     align-items: flex-start;
-    gap: 0.5rem;
+    row-gap: 0.45rem;
   }
 
   .clients__list em {
-    text-align: left;
-    flex-basis: auto;
+    justify-self: stretch;
+    text-align: right;
   }
 }
 
@@ -1176,13 +1236,14 @@ main:not(.t-page) .cta__inner {
   letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--accent);
+  text-align: left;
 }
 
 .t-card__aside {
   display: flex;
   flex-direction: column;
   gap: 0.85rem;
-  align-items: flex-start;
+  align-items: center;
 }
 
 .t-card__portrait {
@@ -1243,6 +1304,8 @@ main:not(.t-page) .cta__inner {
   flex-direction: column;
   gap: 0.2rem;
   max-width: 14rem;
+  align-items: center;
+  text-align: center;
 }
 
 .t-card__name {
@@ -1260,18 +1323,11 @@ main:not(.t-page) .cta__inner {
 }
 
 @media (max-width: 819px) {
-  .t-card__header {
-    text-align: center;
-  }
-
   .t-card__aside {
-    align-items: center;
     width: 100%;
   }
 
   .t-card__by {
-    align-items: center;
-    text-align: center;
     max-width: 100%;
   }
 
@@ -1325,10 +1381,6 @@ main:not(.t-page) .cta__inner {
     width: min(150px, 52vw);
   }
 
-  .pull__aside {
-    align-items: flex-start;
-  }
-
   .pull__aside .label {
     align-self: flex-start;
   }
@@ -1337,10 +1389,6 @@ main:not(.t-page) .cta__inner {
     width: min(120px, 42vw);
     max-width: 150px;
     margin-inline: 0;
-  }
-
-  .pull__byline {
-    text-align: left;
   }
 
   .hero {
